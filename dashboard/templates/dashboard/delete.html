@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Hey!</h4>
+        <form method="post">{% csrf_token %}
+            <p>Are you sure you want to delete the board <b>"{{ object }}"</b>?</p>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+{% endblock %}

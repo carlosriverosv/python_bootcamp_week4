@@ -1,0 +1,211 @@
+/* =================================
+  Element Styles
+==================================== */
+
+.home-title{
+  text-align: center;
+}
+
+.home-buttons{
+  padding-top: 50px;
+}
+
+#welcome-text{
+  font-size: 4rem;
+}
+
+
+.grid-container {
+  display: grid;
+   grid-template-columns: auto auto auto auto;
+}
+
+.Login {
+    padding: 60px 0;
+  }
+
+.Login form {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+.profile-image{
+  border: solid 2px black;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.dogs-event-image{
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 20%;
+  height: 20%;
+  margin-top: 5%;
+}
+
+.event-card, .dog-card, .user-card  {
+  width: auto;
+  height: auto;
+  margin: 5% 5% 5% 5%;
+  text-align: left;
+  background: #fff;
+}
+
+.event-card-border, .dog-card-border, .user-card-border{
+  border-radius: 5%;
+}
+
+.event-card-shadow, .dog-card-shadow, .user-card-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.event-card-header{
+  background-color: #4CAF50;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 10px;
+}
+
+.event-card-header-dogName {
+  margin-left: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.event-card-header-eventType{
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.event-card-header-eventType-edit{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.event-card-content{
+  font-size: 15px;
+  color: black;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.dog-card-content {
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.user-card-content{
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.dog-card-image{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border: solid 2px black
+}
+
+
+.user-card-image{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border: solid 2px black
+}
+
+.event-card-footer, .dog-card-footer  {
+  padding: 20px 20px 40px 20px;
+}
+
+.event-card:hover {
+  /*border-bottom: green solid 5px;*/
+}
+
+.buttons-toolbar{
+  margin-top: 10px;
+}
+
+.list-primary {
+  float: left;
+  width: 50%;
+  padding: 20px 10px 10px 20px ;
+}
+
+.list-primary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-primary a, li {
+  color: white;
+  margin-bottom: 5px;
+}
+.subscribe {
+  float: right;
+  width: 42%;
+  padding-bottom: 1.8em;
+}
+
+.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .5;
+  transition: all .25s;
+}
+
+.twitter {
+  background-image: url('twitter.svg');
+}
+
+.facebook {
+  background-image: url('facebook.svg');
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgb(102, 102, 102);
+  border-radius: 10px;
+}
+
+footer small{
+  color: white;
+}
+
+#not-found{
+  display: block;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+.space{
+    padding: 20px;
+}

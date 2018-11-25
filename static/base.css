@@ -1,0 +1,31 @@
+.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .5;
+  transition: all .25s;
+}
+
+.twitter {
+  background-image: url("teams/static/twitter.svg");
+}
+
+.facebook {
+  background-image: url("teams/static/facebook.svg");
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgb(102, 102, 102);
+  border-radius: 10px;
+}
+
+footer small{
+  color: white;
+}

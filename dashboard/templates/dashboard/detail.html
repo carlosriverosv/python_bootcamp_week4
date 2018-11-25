@@ -1,0 +1,13 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<h1>teams</h1>
+<section class="nav">
+</section>
+
+<section class="body-dashboard">
+    {% for board in boards %}
+            <h2>{{board.name}}</h2>
+        </div>
+    {% endfor %}
+</section>
