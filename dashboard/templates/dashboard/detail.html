@@ -1,13 +1,58 @@
-{% load bootstrap4 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-<h1>teams</h1>
-<section class="nav">
-</section>
+{% extends 'base.html' %}
 
-<section class="body-dashboard">
-    {% for board in boards %}
-            <h2>{{board.name}}</h2>
-        </div>
-    {% endfor %}
-</section>
+{% block content %}
+
+    <div class="board-title">
+        {{ board.name }}
+    </div>
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form class="form-inline" method="post" action="column/">
+            {% csrf_token %}
+            <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">New column name</label>
+                <input type="text" class="form-control mb-2" id="inlineFormInput" name="column_name"
+                       placeholder="Name of the new column">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Add column</button>
+        </form>
+    </div>
+
+    <div class="grid-container">
+        {% for column in board.column_set.all %}
+            <div class="grid-item">
+                <div class="column">
+                    <div class="column-title">
+                        {{ column.name }}
+                    </div>
+
+                    {% for task in column.task_set.all %}
+                        <div class="task-title">
+                            {{ task.title }}
+                        </div>
+                        <div class="task">
+                            {{ task.description }}
+                        </div>
+                    {% endfor %}
+
+                    <form class="form add-task-space" method="post" action="column/{{ column.id }}/task/">
+                        {% csrf_token %}
+                        <div class="col-auto">
+                            <input type="text" class="form-control mb-2" id="inlineFormInput" name="task_title"
+                                   placeholder="Title of your task">
+                            <input type="text" class="form-control mb-2" id="inlineFormInput" name="task_description"
+                                   placeholder="Describe your task">
+                        </div>
+                        <button type="submit" class="btn btn-secondary button-fullsize">Add task</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

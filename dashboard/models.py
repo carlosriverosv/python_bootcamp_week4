@@ -14,7 +14,7 @@ class Board(models.Model):
 
 class Column(models.Model):
     board = models.ForeignKey(Board, on_delete='cascade')
-    index = models.IntegerField()
+    #index = models.IntegerField()
     name = models.CharField(max_length=50)
 
     def __str__(self):
