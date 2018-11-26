@@ -20,11 +20,7 @@
    grid-template-columns: auto auto auto auto;
 }
 
-.Login {
-    padding: 60px 0;
-  }
-
-.Login form {
+.login form {
     margin: 0 auto;
     max-width: 500px;
   }
@@ -44,41 +40,31 @@
   margin-top: 5%;
 }
 
-.event-card, .dog-card, .user-card  {
+.event-card  {
   width: auto;
   height: auto;
   margin: 5% 5% 5% 5%;
   text-align: left;
-  background: #fff;
+  background: #ffffff;
 }
 
-.event-card-border, .dog-card-border, .user-card-border{
-  border-radius: 5%;
+.event-card-border{
+  border-radius: 10px;
 }
 
-.event-card-shadow, .dog-card-shadow, .user-card-shadow{
+.event-card-shadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .event-card-header{
   background-color: #c6cbeb;
-  padding: 20px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   border-radius: 10px;
   margin-bottom: 10px;
   color: #696969;
+  font-size: 20px;
 }
 
-.event-card-header-dogName {
-  margin-left: 20px;
-  color: white;
-  font-size: 30px;
-}
-
-.event-card-header-eventType{
-  text-align: center;
-  color: white;
-  font-size: 25px;
-}
 
 .event-card-header-eventType-edit{
   text-align: center;
@@ -95,33 +81,6 @@
   margin-top: 20px;
 }
 
-.dog-card-content {
-  font-size: 15px;
-  color: black;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.user-card-content{
-  font-size: 15px;
-  color: black;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.dog-card-image{
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-top: 20px;
-  border: solid 2px black
-}
-
-
 .user-card-image{
   border-radius: 50%;
   width: 200px;
@@ -131,11 +90,7 @@
 }
 
 .event-card-footer, .dog-card-footer  {
-  padding: 20px 20px 40px 20px;
-}
-
-.event-card:hover {
-  /*border-bottom: green solid 5px;*/
+  padding: 20px 20px 0px 20px;
 }
 
 .buttons-toolbar{
@@ -182,17 +137,18 @@
   background-image: url('facebook.svg');
 }
 
-footer {
+.footer {
   width: 100%;
   height: 150px;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 20px 20px 20px 20px;
-  background-color: rgb(102, 102, 102);
+  background-color: #343a40;
   border-radius: 10px;
 }
 
-footer small{
+.footer small{
   color: white;
+  text-align: center;
 }
 
 #not-found{
@@ -217,7 +173,6 @@ a:hover, a:visited, a:link, a:active{
   height: auto;
   margin: 5% 5% 5% 5%;
   text-align: left;
-  border: 10px #1e7e34;
   border-radius: 5px;
   background: rgba(230,230,230,1);
   background: -moz-linear-gradient(left, rgba(230,230,230,1) 0%, rgba(219,219,219,0.61) 77%, rgba(214,214,214,0.5) 98%, rgba(214,214,214,0.5) 100%);
@@ -278,6 +233,9 @@ a:hover, a:visited, a:link, a:active{
 
 .button-fullsize{
   width: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .add-task-space{

@@ -56,8 +56,9 @@ ROOT_URLCONF = 'teams.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./teams/static',
-                 './teams/dashboard/templates/'
+        'DIRS': ['./teams/static/',
+                 './teams/dashboard/templates/',
+                 './teams/home/templates/home',
                  ],
         'APP_DIRS': False,
         'OPTIONS': {
