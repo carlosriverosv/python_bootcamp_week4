@@ -12,6 +12,21 @@ class IndexView(generic.ListView):
     template_name = 'dashboard/index.html'
     context_object_name = 'boards'
 
+    # def get_queryset(self):
+    #     try:
+    #         _ = self.request.session["username"]
+    #         super().get_queryset()
+    #     except KeyError:
+    #         pass
+    #
+    # def get_template_names(self):
+    #     try:
+    #         _ = self.request.session["username"]
+    #         super().get_queryset()
+    #         return 'dashboard/index.html'
+    #     except KeyError:
+    #         return 'home/index.html'
+
 
 class DetailView(generic.DetailView):
     template_name = 'dashboard/detail.html'
@@ -29,14 +44,14 @@ def create_board(request):
     name = request.POST.get('name', None)
     slug = "{}-{}".format(name.lower().replace(' ', '-'), datetime.today())
     description = request.POST.get('description')
-    new_board = Board.objects.create(name=name, slug=slug, description=description)
+    Board.objects.create(name=name, slug=slug, description=description)
     messages.add_message(request, messages.INFO, "New board created!")
     return HttpResponseRedirect('/dashboard/')
 
 
 def create_column(request, pk):
     column_name = request.POST.get('column_name')
-    new_column = Column.objects.create(name=column_name, board=Board.objects.filter(pk=pk)[0])
+    Column.objects.create(name=column_name, board=Board.objects.filter(pk=pk)[0])
     messages.add_message(request, messages.INFO, "New column created!")
     return HttpResponseRedirect(''.join(['/dashboard/', str(pk)]))
 
@@ -44,5 +59,5 @@ def create_column(request, pk):
 def create_task(request, pk, column_id):
     task_description = request.POST.get('task_description')
     task_title = request.POST.get('task_title')
-    new_task = Task.objects.create(column=Column.objects.filter(pk=column_id)[0], title=task_title, description=task_description)
+    Task.objects.create(column=Column.objects.filter(pk=column_id)[0], title=task_title, description=task_description)
     return HttpResponseRedirect(''.join(['/dashboard/', str(pk)]))

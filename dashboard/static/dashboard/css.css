@@ -30,6 +30,11 @@
   width: 100%;
   }
 
+.sign-up{
+  margin-top: 5%;
+  width: 100%;
+}
+
 .profile-image{
   border: solid 2px black;
   border-radius: 50%;
