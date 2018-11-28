@@ -17,12 +17,17 @@
 
 .grid-container {
   display: grid;
-   grid-template-columns: auto auto auto auto;
+   grid-template-columns: auto auto auto;
 }
 
-.login form {
-    margin: 0 auto;
-    max-width: 500px;
+.grid-container-home {
+  display: grid;
+   grid-template-columns: auto auto;
+}
+
+.login{
+  margin-top: 20%;
+  width: 100%;
   }
 
 .profile-image{
@@ -130,25 +135,25 @@
 }
 
 .twitter {
-  background-image: url('twitter.svg');
+  background-image: url('/static/home/twitter.svg');
 }
 
 .facebook {
-  background-image: url('facebook.svg');
+  background-image: url('/static/home/facebook.svg');
 }
 
 .footer {
   width: 100%;
   height: 150px;
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 20px 20px 20px 20px;
   background-color: #343a40;
   border-radius: 10px;
+  text-align: center;
 }
 
 .footer small{
   color: white;
-  text-align: center;
 }
 
 #not-found{

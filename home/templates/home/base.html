@@ -1,0 +1,56 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'dashboard/css.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Bodeu, your dashboard app</title>
+{% endblock %}
+{% block body %}
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            {% block bar %}
+            {% endblock %}
+        </div>
+
+    </nav>
+
+    <div class="space"></div>
+
+    <div class="container">
+        {% block content %}Nothing Here{% endblock %}
+    </div>
+
+
+{% endblock %}
+
+<div class="footer">
+    <small> Bodeu &copy;2018</small>
+    <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social twitter">
+        Twitter
+    </a>
+    <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social facebook">
+        Facebook
+    </a>
+</div>
+</html>

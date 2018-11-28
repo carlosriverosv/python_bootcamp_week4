@@ -1,18 +1,42 @@
-{% extends 'base.html' %}
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block bar %}
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Sign Up</a>
+            </div>
+{% endblock %}
 
 {% block content %}
-    <div class="login">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                       placeholder="Enter email">
+    <div class="grid-container-home">
+        <div class="grid-item">
+            <img src="{% static 'home/Bodeu.png' %}" class="img-fluid" alt="logo Bodeau">
+        </div>
+        <div class="grid-item">
+            {% if message %}
+            <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+
+            <div class="login">
+                <h2>Welcome to Bodeu!</h2>
+                <form method="post" action="/login/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                               placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                Not registered? <a href="">Register</a>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </div>
 {% endblock %}

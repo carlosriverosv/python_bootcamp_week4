@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'dashboard.apps.DashboardConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'accounts.apps.AccountsConfig',
+    'dashboard.apps.DashboardConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,11 +58,9 @@ ROOT_URLCONF = 'teams.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./teams/static/',
-                 './teams/dashboard/templates/',
-                 './teams/home/templates/home',
+        'DIRS': [
                  ],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -124,3 +124,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/carlos/Documents/py_course/teams/teams/static/'
