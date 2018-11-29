@@ -4,6 +4,7 @@ from django.template import loader
 from requests.exceptions import ConnectionError
 from django.http import HttpResponse, HttpResponseRedirect
 
+from .models import Profile
 
 def login(request):
     context = {}
@@ -40,7 +41,9 @@ def sign_up(request):
                                      json={"email": email, "username": username, "password": password})
             if response.status_code == 201:
                 response = response.json()
-                request.session["username"] = response.get("data", {}).get("username")
+                username = response.get("data", {}).get("username")
+                request.session["username"] = username
+                Profile.objects.create(username=username)
                 return HttpResponseRedirect('/dashboard/')
             else:
                 response = response.json()

@@ -1,5 +1,13 @@
 {% extends '../home/base.html' %}
 
+{% block bar %}
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/dashboard/">Dashboards <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Team</a>
+        <a class="nav-item nav-link" href="/logout/">Logout</a>
+    </div>
+{% endblock %}
+
 {% block content %}
 
     <div class="board-title">
@@ -8,7 +16,7 @@
     <div>
         {% if messages %}
             {% for message in messages %}
-                <div class="alert alert-success" role="alert">
+                <div {% if message.tags == 'error' %} class="alert alert-danger" {% else %} class="alert alert-success" {% endif %} role="alert">
                     {{ message }}
                 </div>
             {% endfor %}

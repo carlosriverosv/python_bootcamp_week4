@@ -2,19 +2,6 @@
   Element Styles
 ==================================== */
 
-.home-title{
-  text-align: center;
-}
-
-.home-buttons{
-  padding-top: 50px;
-}
-
-#welcome-text{
-  font-size: 4rem;
-}
-
-
 .grid-container {
   display: grid;
    grid-template-columns: auto auto auto;
@@ -35,22 +22,7 @@
   width: 100%;
 }
 
-.profile-image{
-  border: solid 2px black;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-.dogs-event-image{
-  border-radius: 50%;
-  border: 2px solid white;
-  width: 20%;
-  height: 20%;
-  margin-top: 5%;
-}
-
-.event-card  {
+.board-card  {
   width: auto;
   height: auto;
   margin: 5% 5% 5% 5%;
@@ -58,15 +30,15 @@
   background: #ffffff;
 }
 
-.event-card-border{
+.board-card-border{
   border-radius: 10px;
 }
 
-.event-card-shadow{
+.board-card-shadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.event-card-header{
+.board-card-header{
   background-color: #c6cbeb;
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
@@ -75,14 +47,7 @@
   font-size: 20px;
 }
 
-
-.event-card-header-eventType-edit{
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-.event-card-content{
+.board-card-content{
   font-size: 15px;
   color: black;
   text-align: left;
@@ -91,60 +56,8 @@
   margin-top: 20px;
 }
 
-.user-card-image{
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-top: 20px;
-  border: solid 2px black
-}
-
-.event-card-footer, .dog-card-footer  {
+.board-card-footer  {
   padding: 20px 20px 0px 20px;
-}
-
-.buttons-toolbar{
-  margin-top: 10px;
-}
-
-.list-primary {
-  float: left;
-  width: 50%;
-  padding: 20px 10px 10px 20px ;
-}
-
-.list-primary ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.list-primary a, li {
-  color: white;
-  margin-bottom: 5px;
-}
-.subscribe {
-  float: right;
-  width: 42%;
-  padding-bottom: 1.8em;
-}
-
-.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .5;
-  transition: all .25s;
-}
-
-.twitter {
-  background-image: url('/static/home/twitter.svg');
-}
-
-.facebook {
-  background-image: url('/static/home/facebook.svg');
 }
 
 .footer {
@@ -159,14 +72,6 @@
 
 .footer small{
   color: white;
-}
-
-#not-found{
-  display: block;
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 a:hover, a:visited, a:link, a:active{
@@ -250,4 +155,10 @@ a:hover, a:visited, a:link, a:active{
 
 .add-task-space{
   padding-top: 40px;
+}
+
+.no-boards{
+  text-align: center;
+  padding: 10% 10% 10% 10%;
+  font-size: 40px;
 }

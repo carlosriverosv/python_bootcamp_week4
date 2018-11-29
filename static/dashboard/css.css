@@ -50,7 +50,7 @@
   margin-top: 5%;
 }
 
-.event-card  {
+.board-card  {
   width: auto;
   height: auto;
   margin: 5% 5% 5% 5%;
@@ -58,15 +58,15 @@
   background: #ffffff;
 }
 
-.event-card-border{
+.board-card-border{
   border-radius: 10px;
 }
 
-.event-card-shadow{
+.board-card-shadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.event-card-header{
+.board-card-header{
   background-color: #c6cbeb;
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
@@ -82,7 +82,7 @@
   font-size: 20px;
 }
 
-.event-card-content{
+.board-card-content{
   font-size: 15px;
   color: black;
   text-align: left;
@@ -99,7 +99,7 @@
   border: solid 2px black
 }
 
-.event-card-footer, .dog-card-footer  {
+.board-card-footer, .dog-card-footer  {
   padding: 20px 20px 0px 20px;
 }
 
