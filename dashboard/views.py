@@ -20,14 +20,6 @@ class IndexView(generic.ListView):
         except KeyError:
             pass
 
-    # def get_template_names(self):
-    #     try:
-    #         _ = self.request.session["username"]
-    #         super().get_queryset()
-    #         return 'dashboard/index.html'
-    #     except KeyError:
-    #         return 'home/index.html'
-
 
 class DetailView(generic.DetailView):
     template_name = 'dashboard/detail.html'

@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import Profile
 
+
 def login(request):
     context = {}
     if request.method == "POST":
