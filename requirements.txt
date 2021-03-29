@@ -19,7 +19,7 @@ pickleshare==0.7.5
 pkg-resources==0.0.0
 prompt-toolkit==2.0.6
 ptyprocess==0.6.0
-Pygments==2.2.0
+Pygments==2.7.4
 PyJWT==1.5.3
 pytz==2017.3
 requests==2.20.1
